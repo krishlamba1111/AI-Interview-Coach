@@ -1,0 +1,704 @@
+/* ================================
+   GENERAL
+================================ */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f7f5ff;
+    color: #202040;
+    line-height: 1.6;
+}
+
+
+/* ================================
+   HEADER
+================================ */
+
+header {
+    width: 100%;
+    min-height: 75px;
+    padding: 15px 7%;
+    background: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-bottom: 1px solid #e8e5f5;
+    box-shadow: 0 4px 20px rgba(80, 60, 150, 0.08);
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 27px;
+    font-weight: 700;
+
+    background: linear-gradient(90deg, #6c3cff, #247cff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #3b3b5c;
+    font-size: 16px;
+    font-weight: 500;
+
+    transition: 0.3s ease;
+}
+
+nav a:hover {
+    color: #6c3cff;
+}
+
+nav .login-btn {
+    padding: 10px 22px;
+    color: white;
+    border-radius: 25px;
+
+    background: linear-gradient(135deg, #6c3cff, #247cff);
+
+    box-shadow: 0 6px 18px rgba(108, 60, 255, 0.25);
+}
+
+nav .login-btn:hover {
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: 0 9px 24px rgba(108, 60, 255, 0.35);
+}
+
+
+/* ================================
+   HERO
+================================ */
+
+.hero {
+    min-height: 620px;
+    padding: 100px 8%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(circle at 15% 20%, rgba(155, 110, 255, 0.25), transparent 30%),
+        radial-gradient(circle at 85% 25%, rgba(0, 200, 255, 0.20), transparent 30%),
+        radial-gradient(circle at 50% 90%, rgba(255, 80, 180, 0.16), transparent 35%),
+        #f7f5ff;
+}
+
+.hero h2 {
+    max-width: 850px;
+
+    font-size: 58px;
+    line-height: 1.1;
+    margin-bottom: 25px;
+
+    background: linear-gradient(
+        90deg,
+        #6637ff,
+        #247cff,
+        #00a8cc
+    );
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    max-width: 650px;
+
+    font-size: 19px;
+    color: #606080;
+
+    margin-bottom: 35px;
+}
+
+.hero button,
+.cta button {
+    border: none;
+    padding: 14px 32px;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    color: white;
+    background: linear-gradient(135deg, #6c3cff, #247cff);
+
+    border-radius: 30px;
+
+    cursor: pointer;
+
+    box-shadow: 0 8px 25px rgba(108, 60, 255, 0.30);
+
+    transition: 0.3s ease;
+}
+
+.hero button:hover,
+.cta button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(108, 60, 255, 0.40);
+}
+
+
+/* ================================
+   COMMON SECTION
+================================ */
+
+.features,
+.how-it-works,
+.interview-types,
+.ai-analysis,
+.performance,
+.why-us {
+    padding: 90px 8%;
+    text-align: center;
+}
+
+.features h2,
+.how-it-works h2,
+.interview-types h2,
+.ai-analysis h2,
+.performance h2,
+.why-us h2 {
+    font-size: 38px;
+    margin-bottom: 45px;
+}
+
+
+/* ================================
+   FEATURES
+================================ */
+
+.features {
+    background: #f0edff;
+}
+
+.features h2 {
+    color: #633cff;
+}
+
+.features-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+}
+
+.feature-card {
+    padding: 30px;
+
+    background: white;
+    border: 1px solid #e3ddff;
+    border-radius: 18px;
+
+    text-align: left;
+
+    box-shadow: 0 8px 25px rgba(80, 60, 150, 0.08);
+
+    transition: 0.3s ease;
+}
+
+.feature-card:hover {
+    transform: translateY(-7px);
+
+    border-color: #9b7cff;
+
+    box-shadow: 0 15px 35px rgba(108, 60, 255, 0.18);
+}
+
+.feature-card h3 {
+    color: #633cff;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #666680;
+}
+
+
+/* ================================
+   HOW IT WORKS
+================================ */
+
+.how-it-works {
+    background: white;
+}
+
+.how-it-works h2 {
+    color: #247cff;
+}
+
+.steps-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.step {
+    padding: 25px;
+
+    background: linear-gradient(
+        145deg,
+        #f8f6ff,
+        #eef8ff
+    );
+
+    border: 1px solid #e0e5ff;
+    border-radius: 16px;
+
+    transition: 0.3s ease;
+}
+
+.step:hover {
+    transform: translateY(-6px);
+
+    box-shadow: 0 12px 30px rgba(36, 124, 255, 0.15);
+}
+
+.step h3 {
+    color: #247cff;
+    margin-bottom: 10px;
+    font-size: 19px;
+}
+
+.step p {
+    color: #666680;
+}
+
+
+/* ================================
+   INTERVIEW TYPES
+================================ */
+
+.interview-types {
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(108, 60, 255, 0.12),
+            transparent 30%
+        ),
+        #f5f3ff;
+}
+
+.interview-types h2 {
+    color: #6c3cff;
+}
+
+.interview-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.interview-card {
+    padding: 32px;
+
+    background: white;
+    border-radius: 18px;
+
+    border: 1px solid #e1dcff;
+
+    box-shadow: 0 8px 25px rgba(80, 60, 150, 0.08);
+
+    transition: 0.3s ease;
+}
+
+.interview-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 15px 35px rgba(108, 60, 255, 0.18);
+}
+
+.interview-card h3 {
+    color: #633cff;
+    font-size: 21px;
+    margin-bottom: 10px;
+}
+
+.interview-card p {
+    color: #666680;
+}
+
+
+/* ================================
+   AI ANALYSIS
+================================ */
+
+.ai-analysis {
+    background:
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(0, 190, 255, 0.15),
+            transparent 30%
+        ),
+        #ffffff;
+}
+
+.ai-analysis h2 {
+    color: #247cff;
+}
+
+.ai-analysis > p {
+    max-width: 650px;
+    margin: 0 auto 40px;
+
+    color: #666680;
+}
+
+.analysis-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.analysis-card {
+    padding: 30px;
+
+    background: #f3f0ff;
+
+    border: 1px solid #ded7ff;
+    border-radius: 18px;
+
+    transition: 0.3s ease;
+}
+
+.analysis-card:hover {
+    transform: translateY(-7px);
+
+    background: #ece7ff;
+
+    box-shadow: 0 12px 30px rgba(108, 60, 255, 0.15);
+}
+
+.analysis-card h3 {
+    color: #633cff;
+    margin-bottom: 10px;
+}
+
+.analysis-card p {
+    color: #666680;
+}
+
+
+/* ================================
+   PERFORMANCE
+================================ */
+
+.performance {
+    background:
+        linear-gradient(
+            135deg,
+            #eef5ff,
+            #f5f0ff
+        );
+}
+
+.performance h2 {
+    color: #247cff;
+}
+
+.performance > p {
+    max-width: 650px;
+    margin: 0 auto 40px;
+
+    color: #606080;
+}
+
+.performance-container {
+    max-width: 1100px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.performance-card {
+    padding: 30px;
+
+    background: white;
+
+    border-radius: 18px;
+    border: 1px solid #dce6ff;
+
+    box-shadow: 0 8px 25px rgba(36, 124, 255, 0.08);
+
+    transition: 0.3s ease;
+}
+
+.performance-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 15px 35px rgba(36, 124, 255, 0.18);
+}
+
+.performance-card h3 {
+    color: #247cff;
+    margin-bottom: 10px;
+}
+
+.performance-card p {
+    color: #666680;
+}
+
+
+/* ================================
+   WHY US
+================================ */
+
+.why-us {
+    background: white;
+}
+
+.why-us h2 {
+    color: #e84b9b;
+}
+
+.why-container {
+    max-width: 1000px;
+    margin: auto;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.why-card {
+    padding: 30px;
+
+    background: #fff6fb;
+
+    border: 1px solid #ffd9eb;
+    border-radius: 18px;
+
+    transition: 0.3s ease;
+}
+
+.why-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow: 0 15px 35px rgba(232, 75, 155, 0.15);
+}
+
+.why-card h3 {
+    color: #e84b9b;
+    margin-bottom: 10px;
+}
+
+.why-card p {
+    color: #666680;
+}
+
+
+/* ================================
+   CTA
+================================ */
+
+.cta {
+    min-height: 400px;
+    padding: 90px 8%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    background:
+        radial-gradient(
+            circle at 20% 30%,
+            rgba(0, 210, 255, 0.20),
+            transparent 30%
+        ),
+        radial-gradient(
+            circle at 80% 70%,
+            rgba(255, 70, 180, 0.20),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #24105c,
+            #172d72
+        );
+
+    color: white;
+}
+
+.cta h2 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.cta p {
+    max-width: 600px;
+    margin-bottom: 30px;
+
+    color: #e5e5ff;
+}
+
+.cta button {
+    background: white;
+    color: #5732d8;
+
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.20);
+}
+
+.cta button:hover {
+    background: #f5f2ff;
+}
+
+
+/* ================================
+   FOOTER
+================================ */
+
+footer {
+    padding: 25px;
+
+    text-align: center;
+
+    background: #11152f;
+    color: #bfc3e5;
+
+    font-size: 14px;
+}
+
+
+/* ================================
+   TABLET
+================================ */
+
+@media (max-width: 900px) {
+
+    .hero h2 {
+        font-size: 46px;
+    }
+
+    .steps-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .interview-container,
+    .analysis-container,
+    .performance-container,
+    .why-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+
+/* ================================
+   MOBILE
+================================ */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 15px 5%;
+
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    nav {
+        gap: 15px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 14px;
+    }
+
+    .hero {
+        min-height: 520px;
+        padding: 70px 6%;
+    }
+
+    .hero h2 {
+        font-size: 38px;
+    }
+
+    .hero p {
+        font-size: 16px;
+    }
+
+    .features,
+    .how-it-works,
+    .interview-types,
+    .ai-analysis,
+    .performance,
+    .why-us {
+        padding: 70px 6%;
+    }
+
+    .features h2,
+    .how-it-works h2,
+    .interview-types h2,
+    .ai-analysis h2,
+    .performance h2,
+    .why-us h2 {
+        font-size: 30px;
+    }
+
+    .features-container,
+    .steps-container,
+    .interview-container,
+    .analysis-container,
+    .performance-container,
+    .why-container {
+        grid-template-columns: 1fr;
+    }
+
+    .cta {
+        padding: 70px 6%;
+    }
+
+    .cta h2 {
+        font-size: 32px;
+    }
+}
