@@ -1,0 +1,119 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fb;
+    color: #222;
+}
+
+/* Header */
+
+hgroup {
+    background-color: #1e293b;
+    color: white;
+    padding: 20px 40px;
+    margin: 0;
+}
+
+hgroup h1 {
+    margin: 0;
+    font-size: 28px;
+}
+
+/* Navigation */
+
+nav {
+    background-color: white;
+    padding: 15px 40px;
+    border-bottom: 1px solid #ddd;
+}
+
+nav a {
+    text-decoration: none;
+    color: #334155;
+    margin-right: 30px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #2563eb;
+}
+
+/* Main */
+
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+/* Welcome */
+
+main h3 {
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+main > p {
+    color: #64748b;
+    font-size: 17px;
+}
+
+/* Start Interview Button */
+
+button {
+    margin-top: 20px;
+    padding: 14px 25px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2563eb;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #1d4ed8;
+}
+
+/* Performance */
+
+main h4 {
+    font-size: 22px;
+    margin-top: 40px;
+}
+
+/* Performance Cards */
+
+main > div {
+    display: inline-block;
+    width: 31%;
+    margin-right: 2%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+    vertical-align: top;
+}
+
+main > div:last-child {
+    margin-right: 0;
+}
+
+main > div h5 {
+    margin-top: 0;
+    color: #64748b;
+    font-size: 15px;
+}
+
+main > div p {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 0;
+}
+
